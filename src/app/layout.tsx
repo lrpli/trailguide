@@ -11,7 +11,7 @@ export function generateMetadata(): Metadata {
     manifest: "/manifest.json",
     ...(config.siteUrl ? { metadataBase: new URL(config.siteUrl) } : {}),
     icons: {
-      icon: "/icons/icon.svg",
+      icon: config.logo || "/icons/icon.svg",
     },
     openGraph: {
       title: config.siteName,
@@ -28,7 +28,7 @@ export function generateMetadata(): Metadata {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#2f5233",
+  themeColor: "#3d5c3a",
   width: "device-width",
   initialScale: 1,
 };

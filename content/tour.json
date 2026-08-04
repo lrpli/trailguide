@@ -4,6 +4,7 @@
   "tagline": "A self-guided walk through a 1,000-year-old Mississippian culture site.",
   "aboutUrl": "https://aztalan.us",
   "siteUrl": "https://trailguide.pages.dev",
+  "logo": "/icons/aztalan-logo.svg",
   "center": { "lat": 43.0665, "lng": -88.8604 },
   "zoom": 15,
   "note": "PLACEHOLDER CONTENT. Stop coordinates were adjusted to real, public-record locations within the park (OpenStreetMap-tagged mound/stockade points, Wikipedia/Wisconsin DNR park boundary) so every pin falls inside the actual park, but stop order, numbering, and copy are still illustrative samples and have not been verified against on-site signage. Park staff should review and edit every stop via /admin before publishing."

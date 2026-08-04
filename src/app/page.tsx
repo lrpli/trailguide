@@ -17,8 +17,16 @@ export default function HomePage() {
   return (
     <main className="page">
       <div className="header">
-        <p className="kicker">Self-guided trail</p>
-        <h1>{config.siteName}</h1>
+        <div className="header-top">
+          {config.logo && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img className="site-logo" src={config.logo} alt="" />
+          )}
+          <div>
+            <p className="kicker">Self-guided trail</p>
+            <h1>{config.siteName}</h1>
+          </div>
+        </div>
         <p className="tagline">{config.tagline}</p>
 
         <div className="stats-row">

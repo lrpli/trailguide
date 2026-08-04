@@ -70,6 +70,20 @@ a {
   padding: 1.5rem 0 0.5rem;
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.site-logo {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px hsl(var(--shadow-color) / 0.25);
+}
+
 .kicker {
   margin: 0 0 0.5rem;
   font-size: 0.72rem;

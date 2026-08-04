@@ -100,8 +100,10 @@ content from anywhere, no local setup required.
       public-record photos of the park, but under share-alike licenses
       that require attribution if you keep them)
 - [ ] Update `content/tour.json` (drop the `note` field once content is verified)
-- [ ] Replace `public/icons/icon.svg` and `public/manifest.json` with your
-      own branding (add real PNG icons for best home-screen support)
+- [ ] Set `logo` in `content/tour.json` to your own org's logo (this demo
+      uses the real Friends of Aztalan logo from aztalan.us) and update
+      `public/manifest.json` to match (add real PNG icons alongside the
+      SVG for best home-screen support on older devices)
 - [ ] Set `repo:` in `public/admin/config.yml` to your own fork and wire up
       GitHub OAuth so `/admin` works for logged-in staff, not just locally
 - [ ] Set `siteUrl` in `content/tour.json` to your deployed domain (used

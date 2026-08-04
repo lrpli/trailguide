@@ -41,6 +41,13 @@ collections:
               widget: "string",
               required: false,
             }
+          - {
+              label: "Logo",
+              name: "logo",
+              widget: "image",
+              required: false,
+              hint: "Shown next to the site name on the homepage and used as the app icon.",
+            }
           - label: "Map Center"
             name: "center"
             widget: "object"

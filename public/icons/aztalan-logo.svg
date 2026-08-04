@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Friends of Aztalan Logo</title>
+  <desc id="desc">Circular emblem featuring a rising sun, ancient platform mound, and stockade fence inspired by Aztalan State Park.</desc>
+  <defs>
+    <linearGradient id="bg" x1="30" y1="24" x2="210" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7A5027"/>
+      <stop offset="0.6" stop-color="#5C3D1E"/>
+      <stop offset="1" stop-color="#2D5016"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="120" cy="76" r="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF4CA"/>
+      <stop offset="1" stop-color="#E1A24A"/>
+    </radialGradient>
+    <linearGradient id="mound" x1="120" y1="108" x2="120" y2="182" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E7C889"/>
+      <stop offset="1" stop-color="#C6863B"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="120" cy="120" r="114" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="111" fill="none" stroke="#F3E6C5" stroke-width="4"/>
+  <circle cx="120" cy="120" r="96" fill="none" stroke="#D2B278" stroke-opacity="0.6" stroke-width="2"/>
+
+  <circle cx="120" cy="76" r="24" fill="url(#sun)"/>
+  <g stroke="#EBC987" stroke-linecap="round" stroke-width="3" opacity="0.9">
+    <line x1="120" y1="40" x2="120" y2="28"/>
+    <line x1="146" y1="48" x2="155" y2="39"/>
+    <line x1="94" y1="48" x2="85" y2="39"/>
+  </g>
+
+  <path d="M52 188 L78 161 H162 L188 188 Z" fill="#3C2613" opacity="0.92"/>
+
+  <path d="M70 182 L91 154 H149 L170 182 Z" fill="url(#mound)"/>
+  <path d="M83 182 L98 162 H142 L157 182 Z" fill="#D59A4F"/>
+  <path d="M96 182 L106 169 H134 L144 182 Z" fill="#E7B86E"/>
+
+  <g fill="#F0DEB6">
+    <rect x="47" y="176" width="8" height="22" rx="1"/>
+    <rect x="61" y="171" width="8" height="27" rx="1"/>
+    <rect x="75" y="166" width="8" height="32" rx="1"/>
+    <rect x="89" y="162" width="8" height="36" rx="1"/>
+    <rect x="143" y="162" width="8" height="36" rx="1"/>
+    <rect x="157" y="166" width="8" height="32" rx="1"/>
+    <rect x="171" y="171" width="8" height="27" rx="1"/>
+    <rect x="185" y="176" width="8" height="22" rx="1"/>
+  </g>
+
+  <path d="M78 133 C92 124, 148 124, 162 133" fill="none" stroke="#E4BC73" stroke-width="3" stroke-linecap="round"/>
+  <path d="M57 200 C87 206, 153 206, 183 200" fill="none" stroke="#F3E4BF" stroke-opacity="0.85" stroke-width="3" stroke-linecap="round"/>
+</svg>

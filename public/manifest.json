@@ -1,14 +1,14 @@
 {
-  "name": "TrailGuide",
-  "short_name": "TrailGuide",
-  "description": "Self-guided trail app",
+  "name": "Aztalan State Park Trail Guide",
+  "short_name": "Aztalan Trail",
+  "description": "Self-guided trail app for Aztalan State Park",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#faf7f2",
-  "theme_color": "#2f5233",
+  "background_color": "#faf6ee",
+  "theme_color": "#3d5c3a",
   "icons": [
     {
-      "src": "/icons/icon.svg",
+      "src": "/icons/aztalan-logo.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
