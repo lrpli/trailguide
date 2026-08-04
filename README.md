@@ -1,5 +1,12 @@
 # TrailGuide
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org)
+[![Live demo](https://img.shields.io/website?url=https%3A%2F%2Ftrailguide.pages.dev&label=demo)](https://trailguide.pages.dev)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+
+**[Live demo →](https://trailguide.pages.dev)** (sample Aztalan State Park content)
+
 A free, open-source, self-guided digital trail app for small historic
 sites, state parks, and museums that can't afford a custom mobile app.
 
@@ -22,6 +29,11 @@ Large museums use polished apps like Bloomberg Connects; small nonprofit
 budget nor the staff for that. TrailGuide is meant to be small, boring, and
 reusable: any similar organization can fork this repo, swap in their own
 stops, and deploy it for free.
+
+## Screenshots
+
+_TODO: add screenshots of the map view and a stop page once real (non-placeholder)
+content is in place._
 
 ## Stack
 
@@ -84,16 +96,30 @@ content from anywhere, no local setup required.
 - [ ] Update `content/tour.json` (drop the `note` field once content is verified)
 - [ ] Replace `public/icons/icon.svg` and `public/manifest.json` with your
       own branding (add real PNG icons for best home-screen support)
-- [ ] Set `repo:` in `public/admin/config.yml` and wire up GitHub OAuth
-- [ ] Deploy (Cloudflare Pages, Netlify, and Vercel all have free tiers
-      sufficient for a small nonprofit's traffic)
+- [ ] Set `repo:` in `public/admin/config.yml` to your own fork and wire up
+      GitHub OAuth so `/admin` works for logged-in staff, not just locally
 
 ## Deploying
 
-This is a standard Next.js app — deploy it anywhere Next.js runs. For a
-fully static export instead, drop the PWA runtime caching that depends on
-the Node server, or use a host with Next.js support (Vercel, Netlify,
-Cloudflare Pages via their Next.js adapter).
+The app builds to plain static HTML (`output: "export"` in
+`next.config.mjs` — there are no API routes or middleware, so a Node
+server or edge-function adapter is unneeded complexity). Any static host
+works; the live demo runs on Cloudflare Pages:
+
+- **Build command**: `npm run build`
+- **Output directory**: `out`
+- Connect the Cloudflare Pages dashboard directly to your GitHub repo and
+  it redeploys automatically on every push — no CLI or API token needed
+  for ongoing use.
+
+Netlify and Vercel work the same way with the same build command/output
+directory.
+
+## Contributing
+
+Bug reports, feature requests, and PRs from other small heritage sites
+adapting this for their own trail are welcome — see
+[CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License
 
