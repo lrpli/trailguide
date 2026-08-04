@@ -1,9 +1,9 @@
 ---
 title: "Welcome to Aztalan"
 order: 1
-lat: 43.0628
-lng: -88.8589
-summary: "Start of the self-guided trail. Sample stop — replace with your own welcome message."
+lat: 43.0689
+lng: -88.8632
+summary: "Start of the self-guided trail, at the Wisconsin Historical Society marker near the park entrance. Sample stop — replace with your own welcome message."
 image: ""
 audio: ""
 ---

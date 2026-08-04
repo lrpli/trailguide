@@ -1,8 +1,8 @@
 ---
 title: "Crawfish River Overlook"
 order: 4
-lat: 43.0615
-lng: -88.8595
+lat: 43.0654
+lng: -88.8587
 summary: "The river that shaped where the village was built and how it connected to trade routes."
 image: ""
 audio: ""
