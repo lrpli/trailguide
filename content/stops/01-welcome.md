@@ -4,7 +4,8 @@ order: 1
 lat: 43.0689
 lng: -88.8632
 summary: "Start of the self-guided trail, at the Wisconsin Historical Society marker near the park entrance. Sample stop — replace with your own welcome message."
-image: ""
+image: "/media/photos/entrance-sign.jpg"
+imageCredit: "Photo: Dual Freq, CC BY-SA 3.0, via Wikimedia Commons"
 audio: ""
 ---
 

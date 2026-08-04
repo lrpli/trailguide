@@ -48,12 +48,13 @@ export default function StopPage({ params }: { params: { slug: string } }) {
       </div>
 
       {stop.image && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={stop.image}
-          alt={stop.title}
-          style={{ width: "100%", borderRadius: 12, margin: "1rem 0" }}
-        />
+        <figure className="stop-photo">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={stop.image} alt={stop.title} />
+          {stop.imageCredit && (
+            <figcaption>{stop.imageCredit}</figcaption>
+          )}
+        </figure>
       )}
 
       <AudioPlayer src={stop.audio} title={stop.title} />

@@ -4,7 +4,8 @@ order: 2
 lat: 43.0634
 lng: -88.8609
 summary: "Reconstructed section of the palisade that enclosed the village on its north, west, and south sides."
-image: ""
+image: "/media/photos/stockade.jpg"
+imageCredit: "Photo: James Steakley, CC BY-SA 3.0, via Wikimedia Commons"
 audio: ""
 ---
 

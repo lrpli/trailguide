@@ -4,7 +4,8 @@ order: 5
 lat: 43.0677
 lng: -88.8610
 summary: "Near the second platform mound, heading back toward the parking area — how this park stays open, funded, and interpreted."
-image: ""
+image: "/media/photos/clouds-over-mounds.jpg"
+imageCredit: "Photo: Yinan Chen, CC BY 3.0, via Wikimedia Commons / goodfreephotos.com"
 audio: ""
 ---
 

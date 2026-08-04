@@ -91,23 +91,31 @@ export function TrailExplorer({
           return (
             <li key={stop.slug}>
               <Link href={`/stop/${stop.slug}`} className="stop-card">
-                <div className="stop-card-top">
-                  <span className="badge">{stop.order}</span>
-                  <h2>{stop.title}</h2>
-                  {distance !== null && (
-                    <span
-                      className={
-                        stop.slug === nearestSlug
-                          ? "distance-chip distance-chip-nearest"
-                          : "distance-chip"
-                      }
-                    >
-                      {stop.slug === nearestSlug ? "Nearest · " : ""}
-                      {formatDistanceKm(distance)}
-                    </span>
+                <div className="stop-card-row">
+                  {stop.image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img className="stop-thumb" src={stop.image} alt="" />
                   )}
+                  <div className="stop-card-body">
+                    <div className="stop-card-top">
+                      <span className="badge">{stop.order}</span>
+                      <h2>{stop.title}</h2>
+                      {distance !== null && (
+                        <span
+                          className={
+                            stop.slug === nearestSlug
+                              ? "distance-chip distance-chip-nearest"
+                              : "distance-chip"
+                          }
+                        >
+                          {stop.slug === nearestSlug ? "Nearest · " : ""}
+                          {formatDistanceKm(distance)}
+                        </span>
+                      )}
+                    </div>
+                    <p>{stop.summary}</p>
+                  </div>
                 </div>
-                <p>{stop.summary}</p>
               </Link>
             </li>
           );

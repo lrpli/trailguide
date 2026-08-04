@@ -13,6 +13,7 @@ export type Stop = {
   lng: number;
   summary: string;
   image: string;
+  imageCredit: string;
   audio: string;
   body: string;
 };
@@ -49,6 +50,7 @@ export function getAllStops(): Stop[] {
       lng: data.lng,
       summary: data.summary ?? "",
       image: data.image ?? "",
+      imageCredit: data.imageCredit ?? "",
       audio: data.audio ?? "",
       body: content,
     };

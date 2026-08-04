@@ -95,6 +95,10 @@ content from anywhere, no local setup required.
 ### Before going live
 
 - [ ] Replace every stop in `content/stops/` with verified content
+- [ ] Replace the sample photos in `public/media/photos/` with your own —
+      see [CREDITS.md](./CREDITS.md) for what's there now and why (real,
+      public-record photos of the park, but under share-alike licenses
+      that require attribution if you keep them)
 - [ ] Update `content/tour.json` (drop the `note` field once content is verified)
 - [ ] Replace `public/icons/icon.svg` and `public/manifest.json` with your
       own branding (add real PNG icons for best home-screen support)

@@ -4,7 +4,8 @@ order: 3
 lat: 43.0646
 lng: -88.8623
 summary: "The largest of the site's platform mounds, in the southwest corner of the former stockade."
-image: ""
+image: "/media/photos/platform-mound.jpg"
+imageCredit: "Photo: James Steakley, CC BY-SA 3.0, via Wikimedia Commons"
 audio: ""
 ---
 

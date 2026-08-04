@@ -35,6 +35,12 @@ collections:
           - { label: "Organization Name", name: "orgName", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
           - { label: "About URL", name: "aboutUrl", widget: "string" }
+          - {
+              label: "Deployed site URL (for social share previews)",
+              name: "siteUrl",
+              widget: "string",
+              required: false,
+            }
           - label: "Map Center"
             name: "center"
             widget: "object"
@@ -61,5 +67,11 @@ collections:
       - { label: "Longitude", name: "lng", widget: "number" }
       - { label: "Short summary (shown in list)", name: "summary", widget: "text" }
       - { label: "Photo", name: "image", widget: "image", required: false }
+      - {
+          label: "Photo credit (required if photo isn't yours — see CREDITS.md)",
+          name: "imageCredit",
+          widget: "string",
+          required: false,
+        }
       - { label: "Audio guide", name: "audio", widget: "file", required: false }
       - { label: "Full description", name: "body", widget: "markdown" }
