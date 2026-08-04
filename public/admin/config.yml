@@ -1,12 +1,11 @@
 # Decap CMS config — gives non-technical staff a form-based editor that
 # commits directly to this git repo. No custom backend needed.
 #
-# SETUP (one-time, after you push this repo to GitHub):
-# 1. Set `repo:` below to "your-org/your-repo".
-# 2. Follow https://decapcms.org/docs/github-backend/ to enable GitHub
+# SETUP (one-time):
+# 1. Follow https://decapcms.org/docs/github-backend/ to enable GitHub
 #    OAuth (easiest: deploy on Netlify and turn on Identity + Git Gateway,
 #    or run Decap's small OAuth provider on any host).
-# 3. Visit https://your-site/admin to log in and edit content.
+# 2. Visit https://your-site/admin to log in and edit content.
 #
 # LOCAL TESTING (no OAuth needed):
 #   npx decap-server
@@ -16,8 +15,8 @@
 
 backend:
   name: github
-  repo: your-org/your-repo # TODO: fill in after you create the GitHub repo
-  branch: main
+  repo: lrpli/trailguide
+  branch: master
 
 local_backend: true
 
