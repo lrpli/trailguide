@@ -11,9 +11,11 @@ A free, open-source, self-guided digital trail app for small historic
 sites, state parks, and museums that can't afford a custom mobile app.
 
 Visitors get a mobile-friendly map with numbered stops, text/photo/audio
-content per stop, and offline support once a page has loaded (useful at
-sites with poor cell coverage). Staff get a simple, git-backed content
-editor — no code, no database, no hosting bill in most cases.
+content per stop, one-tap turn-by-turn directions to each stop, optional
+geolocation ("how far am I from each stop"), and offline support once a
+page has loaded (useful at sites with poor cell coverage). Staff get a
+simple, git-backed content editor — no code, no database, no hosting bill
+in most cases.
 
 This instance ships with **sample placeholder content** for
 [Aztalan State Park](https://aztalan.us) (Friends of Aztalan State Park,
@@ -98,6 +100,8 @@ content from anywhere, no local setup required.
       own branding (add real PNG icons for best home-screen support)
 - [ ] Set `repo:` in `public/admin/config.yml` to your own fork and wire up
       GitHub OAuth so `/admin` works for logged-in staff, not just locally
+- [ ] Set `siteUrl` in `content/tour.json` to your deployed domain (used
+      for Open Graph / social share previews)
 
 ## Deploying
 

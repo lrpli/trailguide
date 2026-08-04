@@ -3,6 +3,7 @@
   "orgName": "Friends of Aztalan State Park, Inc.",
   "tagline": "A self-guided walk through a 1,000-year-old Mississippian culture site.",
   "aboutUrl": "https://aztalan.us",
+  "siteUrl": "https://trailguide.pages.dev",
   "center": { "lat": 43.0628, "lng": -88.8589 },
   "zoom": 15,
   "note": "PLACEHOLDER CONTENT. Coordinates, stop order, and copy in content/stops/*.md are illustrative samples for this open-source template and have not been verified against on-site signage. Park staff should review and edit every stop via /admin before publishing."

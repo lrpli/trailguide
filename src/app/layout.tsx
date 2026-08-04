@@ -4,10 +4,26 @@ import "./globals.css";
 
 export function generateMetadata(): Metadata {
   const config = getTourConfig();
+
   return {
     title: config.siteName,
     description: config.tagline,
     manifest: "/manifest.json",
+    ...(config.siteUrl ? { metadataBase: new URL(config.siteUrl) } : {}),
+    icons: {
+      icon: "/icons/icon.svg",
+    },
+    openGraph: {
+      title: config.siteName,
+      description: config.tagline,
+      type: "website",
+      ...(config.siteUrl ? { url: config.siteUrl } : {}),
+    },
+    twitter: {
+      card: "summary",
+      title: config.siteName,
+      description: config.tagline,
+    },
   };
 }
 

@@ -23,10 +23,12 @@ export function TrailMap({
   stops,
   center,
   zoom,
+  userLocation,
 }: {
   stops: Stop[];
   center: { lat: number; lng: number };
   zoom: number;
+  userLocation?: { lat: number; lng: number } | null;
 }) {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const active = stops.find((s) => s.slug === activeSlug);
@@ -47,26 +49,17 @@ export function TrailMap({
             setActiveSlug(stop.slug);
           }}
         >
-          <div
-            style={{
-              width: 28,
-              height: 28,
-              borderRadius: "50%",
-              background: "var(--accent)",
-              color: "var(--accent-fg)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 600,
-              fontSize: 13,
-              border: "2px solid white",
-              cursor: "pointer",
-            }}
-          >
-            {stop.order}
-          </div>
+          <div className="map-pin">{stop.order}</div>
         </Marker>
       ))}
+
+      {userLocation && (
+        <Marker latitude={userLocation.lat} longitude={userLocation.lng}>
+          <div className="map-you-are-here" aria-label="Your location">
+            <span className="pulse" />
+          </div>
+        </Marker>
+      )}
 
       {active && (
         <Popup

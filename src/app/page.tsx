@@ -1,35 +1,47 @@
-import Link from "next/link";
 import { getAllStops, getTourConfig } from "@/lib/content";
-import { TrailMap } from "@/components/TrailMap";
+import { TrailExplorer } from "@/components/TrailExplorer";
+import {
+  trailLengthKm,
+  estimateWalkMinutes,
+  formatDistanceKm,
+  formatMinutes,
+} from "@/lib/geo";
 
 export default function HomePage() {
   const config = getTourConfig();
   const stops = getAllStops();
 
+  const lengthKm = trailLengthKm(stops);
+  const walkMinutes = estimateWalkMinutes(lengthKm, stops.length);
+
   return (
     <main className="page">
       <div className="header">
+        <p className="kicker">Self-guided trail</p>
         <h1>{config.siteName}</h1>
-        <p>{config.tagline}</p>
+        <p className="tagline">{config.tagline}</p>
+
+        <div className="stats-row">
+          <div className="stat">
+            <strong>{stops.length}</strong>
+            <span>stops</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat">
+            <strong>{formatDistanceKm(lengthKm)}</strong>
+            <span>trail length</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat">
+            <strong>{formatMinutes(walkMinutes)}</strong>
+            <span>on foot</span>
+          </div>
+        </div>
       </div>
 
       {config.note && <div className="notice">{config.note}</div>}
 
-      <div className="map-wrap">
-        <TrailMap stops={stops} center={config.center} zoom={config.zoom} />
-      </div>
-
-      <ul className="stop-list">
-        {stops.map((stop) => (
-          <li key={stop.slug}>
-            <Link href={`/stop/${stop.slug}`} className="stop-card">
-              <span className="badge">{stop.order}</span>
-              <h2>{stop.title}</h2>
-              <p>{stop.summary}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <TrailExplorer stops={stops} center={config.center} zoom={config.zoom} />
 
       <footer>
         {config.orgName} &middot;{" "}

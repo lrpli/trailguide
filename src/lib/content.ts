@@ -22,6 +22,7 @@ export type TourConfig = {
   orgName: string;
   tagline: string;
   aboutUrl: string;
+  siteUrl?: string;
   center: { lat: number; lng: number };
   zoom: number;
   note?: string;
