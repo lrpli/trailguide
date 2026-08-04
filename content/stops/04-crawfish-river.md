@@ -4,7 +4,8 @@ order: 4
 lat: 43.0654
 lng: -88.8587
 summary: "The river that shaped where the village was built and how it connected to trade routes."
-image: ""
+image: "/media/photos/crawfish-river.jpg"
+imageCredit: "Photo: Aspasia Darkstone, CC BY-SA 3.0, via Wikimedia Commons — the Crawfish River near Milford, WI, not this exact spot"
 audio: ""
 ---
 
