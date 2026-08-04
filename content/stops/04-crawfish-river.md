@@ -1,0 +1,20 @@
+---
+title: "Crawfish River Overlook"
+order: 4
+lat: 43.0615
+lng: -88.8595
+summary: "The river that shaped where the village was built and how it connected to trade routes."
+image: ""
+audio: ""
+---
+
+**SAMPLE STOP — edit me via `/admin`.**
+
+The Crawfish River bordered the village and likely served as a route for
+travel and trade, connecting this community to a much wider network of
+Mississippian-era settlements. Take a moment to look at the water and
+imagine canoes moving goods and people along it centuries ago.
+
+_Replace with verified information about the river's historical role,
+current ecology, and any seasonal wildlife notes worth sharing with
+visitors._

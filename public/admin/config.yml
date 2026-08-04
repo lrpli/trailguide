@@ -1,0 +1,66 @@
+# Decap CMS config — gives non-technical staff a form-based editor that
+# commits directly to this git repo. No custom backend needed.
+#
+# SETUP (one-time, after you push this repo to GitHub):
+# 1. Set `repo:` below to "your-org/your-repo".
+# 2. Follow https://decapcms.org/docs/github-backend/ to enable GitHub
+#    OAuth (easiest: deploy on Netlify and turn on Identity + Git Gateway,
+#    or run Decap's small OAuth provider on any host).
+# 3. Visit https://your-site/admin to log in and edit content.
+#
+# LOCAL TESTING (no OAuth needed):
+#   npx decap-server
+#   # then set local_backend: true below and run `npm run dev`
+#   # visit http://localhost:3000/admin — edits write straight to your
+#   # working copy so you can review them with `git diff`.
+
+backend:
+  name: github
+  repo: your-org/your-repo # TODO: fill in after you create the GitHub repo
+  branch: main
+
+local_backend: true
+
+media_folder: "public/media"
+public_folder: "/media"
+
+collections:
+  - name: "tour"
+    label: "Tour Settings"
+    files:
+      - label: "General Settings"
+        name: "settings"
+        file: "content/tour.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Organization Name", name: "orgName", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "About URL", name: "aboutUrl", widget: "string" }
+          - label: "Map Center"
+            name: "center"
+            widget: "object"
+            fields:
+              - { label: "Latitude", name: "lat", widget: "number" }
+              - { label: "Longitude", name: "lng", widget: "number" }
+          - { label: "Default Zoom", name: "zoom", widget: "number" }
+          - {
+              label: "Internal Note (shown on homepage if set)",
+              name: "note",
+              widget: "text",
+              required: false,
+            }
+
+  - name: "stops"
+    label: "Trail Stops"
+    folder: "content/stops"
+    create: true
+    slug: "{{fields.order}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Order on trail", name: "order", widget: "number" }
+      - { label: "Latitude", name: "lat", widget: "number" }
+      - { label: "Longitude", name: "lng", widget: "number" }
+      - { label: "Short summary (shown in list)", name: "summary", widget: "text" }
+      - { label: "Photo", name: "image", widget: "image", required: false }
+      - { label: "Audio guide", name: "audio", widget: "file", required: false }
+      - { label: "Full description", name: "body", widget: "markdown" }

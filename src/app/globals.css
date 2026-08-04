@@ -1,0 +1,149 @@
+:root {
+  --bg: #faf7f2;
+  --fg: #22281f;
+  --muted: #5c6656;
+  --accent: #2f5233;
+  --accent-fg: #ffffff;
+  --card: #ffffff;
+  --border: #e2ddd2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171a15;
+    --fg: #eceee8;
+    --muted: #a3ab99;
+    --accent: #7fb069;
+    --accent-fg: #12160f;
+    --card: #20241c;
+    --border: #333a2c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+a {
+  color: var(--accent);
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.header {
+  padding: 1.25rem 0 0.5rem;
+}
+
+.header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.notice {
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 1rem 0;
+}
+
+.map-wrap {
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+.stop-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stop-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.stop-card .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-right: 0.6rem;
+}
+
+.stop-card h2 {
+  display: inline;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.stop-card p {
+  margin: 0.4rem 0 0 2.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.stop-body {
+  line-height: 1.6;
+}
+
+.stop-body p {
+  margin: 0 0 1rem;
+}
+
+audio {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
